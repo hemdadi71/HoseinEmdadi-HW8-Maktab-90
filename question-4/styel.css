@@ -1,0 +1,166 @@
+@font-face {
+  font-family: Nunito;
+  src: url(font/Nunito-VariableFont_wght.ttf);
+}
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Nunito;
+}
+
+html {
+  font-size: 62.5%;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+.header {
+  width: 100%;
+  background-color: #333333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  color: #fff;
+  padding: 10rem 0;
+}
+.header p {
+  width: 40%;
+  text-align: center;
+}
+.header h1 {
+  text-align: center;
+}
+.font-lg {
+  font-size: 3.5rem;
+}
+.font-md {
+  font-size: 2.5rem;
+}
+.font-sm {
+  font-size: 2rem;
+}
+.btn {
+  padding: 1.5rem;
+  border: 1px solid #ccc;
+  background-color: transparent;
+  border-radius: 0.3rem;
+  color: #ccc;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #ccc;
+  color: #333333;
+}
+/* @media screen and (max-width: 375px) {
+  .header h1 {
+    font-size: 3rem;
+  }
+  .header p{
+    width: 80%;
+  }
+  .header {
+    padding: 3rem 0;
+    gap: 2rem;
+  }
+  .btn {
+    font-size: 1.5rem;
+    pad: 0.2rem;
+  }
+} */
+.section-one {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #eaeaea;
+  padding: 8rem;
+  gap: 3rem;
+}
+.titles {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 3rem;
+}
+.titles p {
+  width: 30%;
+}
+
+.section-two {
+  width: 100%;
+  display: flex;
+  gap: 3rem;
+  background-color: #333333;
+  padding: 8rem;
+  align-items: center;
+  justify-content: center;
+}
+.card {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 0.1rem;
+  gap: 4rem;
+  padding: 6rem 3rem;
+  text-align: center;
+}
+
+.section-three {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem;
+  gap: 3rem;
+  background-color: #ffffff;
+}
+.section-three p {
+  width: 50%;
+  text-align: center;
+}
+.section-four {
+  width: 100%;
+  display: flex;
+}
+.left,
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  color: #ffffff;
+  text-align: center;
+  padding: 10rem 5rem;
+  gap: 3rem;
+}
+.left {
+  background-color: #2690d4;
+}
+.right {
+  background-color: #333333;
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  background-color: #000;
+  color: #ffffff;
+  padding: 5rem;
+  gap: 100rem;
+}
+.blue {
+  color: #2690d4;
+  text-decoration: none;
+}
