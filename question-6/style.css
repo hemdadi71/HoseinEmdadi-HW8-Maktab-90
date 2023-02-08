@@ -14,50 +14,58 @@
 html {
   font-size: 62.5%;
 }
-html,
 body {
-  width: 100%;
-  height: 100%;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  background-color: #dcdcdc;
 }
-body {
+body::before {
+  content: '';
+  width: 15rem;
+  height: 15rem;
+  border-radius: 100% 0% 0% 100% / 0% 0% 100% 100%;
+  background-color: #0984e2;
+  position: fixed;
+  right: 0rem;
+  top: 0rem;
+}
+body::after {
+  content: '';
+  width: 15rem;
+  height: 15rem;
+  border-radius: 0% 100% 100% 0% / 2% 100% 0% 98%;
+  background-color: #0984e2;
+  position: fixed;
+  left: 0rem;
+  bottom: 0rem;
+}
+.main {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 3.5rem;
-  background-color: #dcdcdc;
-  position: relative;
-  overflow: hidden;
+  margin: 5rem 0;
 }
-.circle {
-  width: 40rem;
-  height: 40rem;
-  border-radius: 100%;
-  background-color: #0984e2;
-}
-.right {
-  position: absolute;
-  right: -21rem;
-  top: -21rem;
-}
-.left {
-  position: absolute;
-  left: -21rem;
-  bottom: -21rem;
-}
+
 .card {
-  width: 35rem;
-  height: 47rem;
+  width: 27rem;
+  height: 37rem;
   background-color: #fff;
   border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3rem;
+  gap: 2rem;
   padding: 7rem 6rem 5rem;
   justify-content: center;
   text-align: center;
   position: relative;
-  box-shadow: 0 0 0.5rem 0.5rem #b7b7b7;
+  box-shadow: 0 0 0.5rem 0.5rem #d8d8d8;
+}
+img {
+  width: 5rem;
+  height: 5rem;
 }
 .card-title h1 {
   font-size: 2rem;
@@ -66,15 +74,176 @@ body {
   font-size: 1.5rem;
 }
 .card-num {
-  width: 7rem;
-  height: 7rem;
+  width: 6rem;
+  height: 6rem;
   background-color: #fff;
-  border: 1px solid #ccc;
+  border: 3px solid #dcdcdc;
   border-radius: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
   font-size: 3rem;
-  top: -3.5rem;
+  top: -3rem;
+}
+/* ......................................................... */
+@media screen and (max-width: 375px) {
+  body::before {
+    content: '';
+    width: 4rem;
+    height: 4rem;
+  }
+  body::after {
+    content: '';
+    width: 4rem;
+    height: 4rem;
+    bottom: 0;
+  }
+  .main {
+    flex-direction: column;
+    gap: 6rem;
+  }
+}
+/* .......................................... */
+@media screen and (min-width: 375px) {
+  body::before {
+    content: '';
+    width: 4rem;
+    height: 4rem;
+  }
+  body::after {
+    content: '';
+    width: 4rem;
+    height: 4rem;
+    bottom: 0;
+  }
+  .main {
+    flex-direction: column;
+    gap: 6rem;
+  }
+}
+/* ..................................................... */
+@media screen and (min-width: 500px) {
+  body::before {
+    content: '';
+    width: 6rem;
+    height: 6rem;
+  }
+  body::after {
+    content: '';
+    width: 6rem;
+    height: 6rem;
+    bottom: 0;
+  }
+  .main {
+    flex-direction: column;
+  }
+  .card {
+    width: 33rem;
+    height: 47rem;
+    gap: 2rem;
+  }
+  img {
+    width: 8rem;
+    height: 8rem;
+  }
+  .card-title h1 {
+    font-size: 2.7rem;
+  }
+  .card-text p {
+    font-size: 2.3rem;
+  }
+}
+/* .................................................... */
+@media screen and (min-width: 650px) {
+  body::before {
+    content: '';
+    width: 8rem;
+    height: 8rem;
+  }
+  body::after {
+    content: '';
+    width: 8rem;
+    height: 8rem;
+    bottom: 0;
+  }
+  .main {
+    flex-direction: column;
+  }
+  .card {
+    width: 42rem;
+    height: 53rem;
+    gap: 2rem;
+  }
+  img {
+    width: 8rem;
+    height: 8rem;
+  }
+  .card-title h1 {
+    font-size: 3rem;
+  }
+  .card-text p {
+    font-size: 2.8rem;
+  }
+}
+/* ............................................................. */
+@media screen and (min-width: 800px) {
+  body::before {
+    width: 10rem;
+    height: 10rem;
+  }
+  body::after {
+    width: 10rem;
+    height: 10rem;
+  }
+  .card {
+    width: 57rem;
+    height: 63rem;
+    gap: 2rem;
+  }
+  img {
+    width: 10rem;
+    height: 10rem;
+  }
+  .card-title h1 {
+    font-size: 3.5rem;
+  }
+  .card-text p {
+    font-size: 3rem;
+  }
+}
+/* ..................................................................... */
+@media screen and (min-width: 1200px) {
+  body::before {
+    width: 10rem;
+    height: 10rem;
+  }
+  body::after {
+    width: 10rem;
+    height: 10rem;
+  }
+  body {
+    overflow: hidden;
+  }
+  .main {
+    flex-direction: row;
+    gap: 3.5rem;
+    margin-top: 10rem;
+  }
+  .card {
+    width: 31rem;
+    height: 44rem;
+    gap: 2rem;
+    padding: 4rem;
+  }
+  img {
+    width: 8rem;
+    height: 8rem;
+  }
+  .card-title h1 {
+    font-size: 2.5rem;
+  }
+  .card-text p {
+    font-size: 2rem;
+  }
 }
