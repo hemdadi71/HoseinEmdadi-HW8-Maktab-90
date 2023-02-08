@@ -1,8 +1,5 @@
 'use strict';
 
-const form = document.getElementById('form');
-const input = document.getElementById('input');
-
 function elemCreator(elem, fun) {
   const element = document.createElement(elem);
   document.body.append(element);
