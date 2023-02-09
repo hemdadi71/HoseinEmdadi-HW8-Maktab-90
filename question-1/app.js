@@ -9,6 +9,8 @@ function setterGenerator(key) {
 }
 const nameSetter = setterGenerator('name');
 nameSetter('Jack');
+const johnSetter = setterGenerator('name-1');
+johnSetter('john');
 console.log(user);
 
 // .....................................................
