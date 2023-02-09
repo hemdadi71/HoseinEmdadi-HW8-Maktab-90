@@ -3,7 +3,7 @@
 function counterMaker() {
   let num = 0;
   return function add(p = 0) {
-    num += p;
+    num = num + p;
     return num;
   };
 }
